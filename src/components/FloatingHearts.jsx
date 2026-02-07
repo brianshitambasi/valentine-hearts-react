@@ -17,8 +17,12 @@ const FloatingHearts = ({ hearts }) => {
       opacity: 0,
       userSelect: 'none',
       pointerEvents: 'none',
-    },
-    floatAnimation: `@keyframes float {
+    }
+  };
+
+  // Inline CSS for the animation
+  const floatAnimation = `
+    @keyframes float {
       0% {
         transform: translateY(100vh) rotate(0deg);
         opacity: 0;
@@ -33,17 +37,16 @@ const FloatingHearts = ({ hearts }) => {
         transform: translateY(-100px) rotate(360deg);
         opacity: 0;
       }
-    }`
-  };
+    }
+  `;
 
   return (
     <>
-      <style>{styles.floatAnimation}</style>
-      <div className="floating-hearts-container" style={styles.container}>
+      <style>{floatAnimation}</style>
+      <div style={styles.container}>
         {hearts.map((heart) => (
           <div
             key={heart.id}
-            className="floating-heart"
             style={{
               ...styles.heart,
               left: `${heart.left}%`,

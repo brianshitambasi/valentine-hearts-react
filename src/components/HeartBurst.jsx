@@ -22,8 +22,12 @@ const HeartBurst = ({ hearts }) => {
       fontSize: '20px',
       pointerEvents: 'none',
       userSelect: 'none',
-    },
-    burstAnimation: `@keyframes burst {
+    }
+  };
+
+  // Inline CSS for the animation
+  const burstAnimation = `
+    @keyframes burst {
       0% {
         transform: translate(0, 0) scale(1) rotate(0deg);
         opacity: 1;
@@ -31,13 +35,13 @@ const HeartBurst = ({ hearts }) => {
       100% {
         opacity: 0;
       }
-    }`
-  };
+    }
+  `;
 
   return (
     <>
-      <style>{styles.burstAnimation}</style>
-      <div className="heart-burst-container" style={styles.container}>
+      <style>{burstAnimation}</style>
+      <div style={styles.container}>
         {activeHearts.map((heart) => {
           const endX = Math.cos(heart.angle) * heart.distance;
           const endY = Math.sin(heart.angle) * heart.distance;
@@ -45,7 +49,6 @@ const HeartBurst = ({ hearts }) => {
           return (
             <div
               key={heart.id}
-              className="burst-heart"
               style={{
                 ...styles.heart,
                 left: `${heart.startX}px`,
