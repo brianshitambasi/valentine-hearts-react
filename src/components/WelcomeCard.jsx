@@ -47,19 +47,19 @@ const WelcomeCard = ({ onHeartClick, clickCount }) => {
     
     // Generate 1000 messages (not 1,000,000 to avoid memory issues)
     for (let i = 0; i < 1000; i++) {
-      // Brian-specific messages
+      // Rosalyn-specific messages
       messages.push(
-        `Brian, I ${loveVerbs[i % loveVerbs.length]} you more than words can express.`
+        `Rosalyn, I ${loveVerbs[i % loveVerbs.length]} you more than words can express.`
       );
       
       messages.push(
-        `My dearest Brian, you are ${loveAdjectives[i % loveAdjectives.length]} and I ${
+        `My dearest Rosalyn, you are ${loveAdjectives[i % loveAdjectives.length]} and I ${
           loveVerbs[(i + 1) % loveVerbs.length]
         } you with all my ${loveNouns[i % loveNouns.length]}.`
       );
       
       messages.push(
-        `Brian, thank you for coming into my life. You make my ${
+        `Rosalyn, thank you for coming into my life. You make my ${
           loveNouns[(i + 2) % loveNouns.length]
         } ${loveAdjectives[(i + 3) % loveAdjectives.length]}.`
       );
@@ -67,26 +67,26 @@ const WelcomeCard = ({ onHeartClick, clickCount }) => {
     
     // Add special messages
     const specialMessages = [
-      "Brian, I love you more than anything in this world.",
-      "Thank you for being in my life, Brian.",
-      "Brian, you are my everything.",
-      "My love for you grows stronger every day, Brian.",
-      "Brian, you are the reason I smile.",
-      "Thank you for loving me, Brian.",
-      "Brian, you complete me.",
-      "Every moment with you is precious, Brian.",
-      "Brian, I'm so grateful for you.",
-      "You are my dream come true, Brian.",
-      "Brian, my heart beats for you.",
-      "Thank you for your love, Brian.",
-      "Brian, you are my soulmate.",
-      "I cherish every memory with you, Brian.",
-      "Brian, you make my world brighter.",
-      "Thank you for your kindness, Brian.",
-      "Brian, I adore you.",
-      "You are my happiness, Brian.",
-      "Brian, I'm forever yours.",
-      "Thank you for everything, Brian."
+      "Rosalyn, I love you more than anything in this world.",
+      "Thank you for being in my life, Rosalyn.",
+      "Rosalyn, you are my everything.",
+      "My love for you grows stronger every day, Rosalyn.",
+      "Rosalyn, you are the reason I smile.",
+      "Thank you for loving me, Rosalyn.",
+      "Rosalyn, you complete me.",
+      "Every moment with you is precious, Rosalyn.",
+      "Rosalyn, I'm so grateful for you.",
+      "You are my dream come true, Rosalyn.",
+      "Rosalyn, my heart beats for you.",
+      "Thank you for your love, Rosalyn.",
+      "Rosalyn, you are my soulmate.",
+      "I cherish every memory with you, Rosalyn.",
+      "Rosalyn, you make my world brighter.",
+      "Thank you for your kindness, Rosalyn.",
+      "Rosalyn, I adore you.",
+      "You are my happiness, Rosalyn.",
+      "Rosalyn, I'm forever yours.",
+      "Thank you for everything, Rosalyn."
     ];
     
     messages.push(...specialMessages);
@@ -258,7 +258,7 @@ const WelcomeCard = ({ onHeartClick, clickCount }) => {
           ❤️
         </div>
         
-        <h1 style={styles.title}>Welcome Brian! Happy Valentine's Day! 💝</h1>
+        <h1 style={styles.title}>Welcome Rosalyn! Happy Valentine's Day! 💝</h1>
         
         <p style={styles.message}>
           Click the heart to create a beautiful burst of love and see a new message!
@@ -275,7 +275,7 @@ const WelcomeCard = ({ onHeartClick, clickCount }) => {
         </div>
         
         <p style={styles.counterInfo}>
-          Each click shows a unique love message for Brian!
+          Each click shows a unique love message for Rosalyn!
         </p>
         
         <p style={styles.instruction}>
